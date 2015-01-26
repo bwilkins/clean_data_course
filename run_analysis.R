@@ -73,3 +73,5 @@ smaller_data_set <- subset(data_set, select=columns_to_keep)
 agg <- aggregate(smaller_data_set, list(smaller_data_set$subject_id, smaller_data_set$activity_name), mean)
 final_data_set <- subset(agg, select=append(c('Group.1', 'Group.2'), interesting_features))
 names(final_data_set) <- columns_to_keep
+
+write.table(final_data_set, 'tidy_data_set.txt', row.names=FALSE)

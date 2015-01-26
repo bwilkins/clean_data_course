@@ -10,4 +10,6 @@ The data sets are then concatenated into one big data set, which is then filtere
 
 From the smaller data set, an aggregated mean is calculated, grouped by subject id and activity name. After subsetting and renaming the columns, this is our final data set.
 
+The final data set is then written out to a file named tidy_data_set.txt
+
 
